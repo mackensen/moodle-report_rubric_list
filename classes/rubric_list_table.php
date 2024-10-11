@@ -56,7 +56,7 @@ class table extends \table_sql {
             get_string('activity_type', 'report_rubric_list'),
             get_string('activity', 'report_rubric_list'),
             get_string('status'),
-            get_string('course')
+            get_string('course'),
         ];
         $this->define_headers($headers);
     }
@@ -91,7 +91,7 @@ class table extends \table_sql {
     protected function col_status($values) {
         $choices = [
             \gradingform_controller::DEFINITION_STATUS_DRAFT => 'statusdraft',
-            \gradingform_controller::DEFINITION_STATUS_READY => 'statusready'
+            \gradingform_controller::DEFINITION_STATUS_READY => 'statusready',
         ];
         return get_string($choices[$values->status], 'core_grading');
     }
